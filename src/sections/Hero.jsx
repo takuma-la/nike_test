@@ -44,14 +44,14 @@ const Hero = () => {
         className="object-contain relative z-10"
         />
 
-      <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[45%] sm:left-[10%] max-sm:px-6 w-full">
-        <ShoeCard/>
+      <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[40%] max-sm:px-6">
+        {/* <ShoeCard/> */}
         {shoes.map((shoe, index) => (
-          <div key={shoe}>
+          <div key={shoe} className="bg-primary bg-hero bg-cover bg-center">
             <ShoeCard
             imgURL={shoe}
             changeBigShoeImage=
-            {(shoe) => setBigShoeImg}
+            {(shoe) => setBigShoeImg(shoe)}
             bigShoeImg={bigShoeImg}
             />
           </div>
@@ -63,4 +63,4 @@ const Hero = () => {
   )
 }
 
-export default Hero;
+export default Hero
